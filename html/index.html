@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <!-- Google Fonts link -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=CoolFont&display=swap">
+    <!-- Your CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="motivation">
+            <h2>"Believe you can and you're halfway there." - Theodore Roosevelt</h2>
+        </div>
+        <div class="header">
+            <h1>To-Do List</h1>
+            <div id="datetime"></div>
+        </div>
+        <div class="toolbar">
+            <div class="input-container">
+                <input type="text" id="taskInput" placeholder="Enter task...">
+                <button id="addTaskBtn">Add Task</button>
+            </div>
+            <div>
+                <label for="filterSelect">Filter:</label>
+                <select id="filterSelect">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="uncompleted">Uncompleted</option>
+                </select>
+            </div>
+        </div>
+        <div class="tasks-container">
+            <ul id="taskList"></ul>
+            <button id="clearCompletedBtn">Clear Completed</button>
+            <button id="clearAllBtn">Clear All</button>
+        </div>
+    </div>
+    <!-- Your JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
