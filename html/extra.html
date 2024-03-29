@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; /* Light gray background */
+            color: #333; /* Dark text color */
+        }
+
+        .container {
+            background-color: #fff; /* White container background */
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+            text-align: center;
+            margin: 20px auto; /* Added margin for spacing */
+            max-width: 800px; /* Increased max-width for responsiveness */
+        }
+
+        .title {
+            font-size: 36px; /* Larger font size for title */
+            font-weight: bold; /* Bold font weight for title */
+            color: #333; /* Dark text color */
+            margin-bottom: 10px; /* Added margin below title */
+        }
+
+        .subtitle {
+            font-size: 18px; /* Font size for subtitle */
+            color: #666; /* Medium gray text color */
+            margin-bottom: 30px; /* Increased margin below subtitle */
+        }
+
+        #dateTime {
+            font-size: 24px; /* Larger font size for date and time */
+            color: #666; /* Medium gray text color */
+            margin-top: 20px; /* Added margin above date and time */
+            margin-bottom: 30px; /* Increased margin below date and time */
+            text-align: center;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: #007bff; /* Blue link color */
+            margin-top: 20px; /* Added margin for link */
+            font-size: 18px; /* Font size for link */
+            font-weight: bold; /* Bold font weight for link */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Underline on hover */
+            color: #0056b3; /* Darker blue color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title" style="font-size: 36px; font-weight: bold; color: #333; margin-bottom: 10px;">TO-DO LIST</h1>
+        <p class="subtitle" style="font-size: 18px; color: #666; margin-bottom: 30px;">"It's now or never"</p>
+        <div id="dateTime" style="font-size: 24px; color: #666; margin-top: 20px; margin-bottom: 30px; text-align: center;"></div>
+    </div>
+
+    <a href="index.html" style="display: block; text-decoration: none; color: #007bff; margin-top: 20px; font-size: 18px; font-weight: bold;">Go to Tasks</a>
+    <script>
+        const dateTimeElement = document.getElementById('dateTime');
+
+        function updateDateTime() {
+            const now = new Date();
+            dateTimeElement.textContent = now.toLocaleString();
+        }
+
+        updateDateTime(); // Update immediately on page load
+        setInterval(updateDateTime, 1000); // Update every second
+    </script>
+</body>
+</html>
