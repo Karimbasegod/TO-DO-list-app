@@ -1,0 +1,109 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Light gray background */
+    color: #333; /* Dark text color */
+}
+
+.container {
+    background-color: #fff; /* White container background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    text-align: center;
+    margin: 20px auto; /* Added margin for spacing */
+    max-width: 800px; /* Increased max-width for responsiveness */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 25px; /* Increased margin between tasks */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.important {
+    color: red;
+    font-weight: bold; /* Added font weight for emphasis */
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-container input,
+.input-container button,
+.input-container select {
+    margin-right: 10px; /* Increased margin between input elements */
+    padding: 8px; /* Added padding for better visual appearance */
+    border-radius: 5px; /* Rounded input elements */
+    border: 1px solid #ccc; /* Light border color */
+}
+
+.motivation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.motivation h2 {
+    font-size: 24px;
+    font-family: 'CoolFont', sans-serif;
+    color: #333; /* Dark text color */
+}
+
+/* Styles for date and time element */
+#datetime {
+    font-size: 16px; /* Reduced font size for date and time */
+    color: #666; /* Medium gray text color */
+    margin-top: 20px; /* Increased margin between tasks and date/time */
+    margin-bottom: 25px; /* Increased margin between date/time and next element */
+    text-align: center;
+}
+
+/* Styles for buttons */
+button {
+    background-color: #007bff; /* Blue button color */
+    color: white;
+    border: none;
+    padding: 10px 15px; /* Increased padding for button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.deleteBtn {
+    background-color: #dc3545; /* Red button color */
+    border-radius: 5px;
+    padding: 8px 12px; /* Adjusted padding for delete button */
+    color: white;
+    border: none;
+}
+
+.deleteBtn:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
