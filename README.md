@@ -29,7 +29,7 @@ This is a simple web application that allows users to manage tasks using a To-Do
 ## Usage
 
 1. Clone the repository to your local machine.
-2. Open the `index.html` file to view the Date and Time page or the `extra.html` file to view the To-Do List page.
+2. Open the `extra.html` file to view the Date and Time page or the `index.html` file to view the To-Do List page.
 3. Interact with the To-Do List page to add, delete, and manage tasks.
 
 ## Credits
