@@ -1,7 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #000033; /* Dark background color */
-    color: white; /* White text color */
+    font-family: 'Roboto', sans-serif;
+    background-color: #000033;
+    color: white;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -10,38 +10,125 @@ body {
 }
 
 .container {
-    background-color: #001f3f; /* Darker blue container background */
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    position: relative;
+    z-index: 1; /* Ensure text and button are above clock */
 }
 
 .title {
     font-size: 48px;
     margin-bottom: 10px;
+    color: #FF6347; /* Tomato color */
 }
 
 .subtitle {
-    font-size: 18px;
+    font-size: 24px;
     font-style: italic;
     margin-bottom: 20px;
+    color: #FFD700; /* Gold color */
 }
 
 #dateTime {
     font-size: 32px;
-    color: #fff; /* White text color for date and time */
+    color: #fff;
 }
 
-a {
-    display: block;
+.task-link {
+    display: inline-block;
     margin-top: 20px;
-    color: #fff; /* White text color for the link */
+    padding: 10px 20px;
+    background-color: #FF6347; /* Tomato color */
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    z-index: 1; /* Ensure button is above clock */
 }
 
-a:hover {
-    color: #ff7f50; /* Orange color on hover */
+.task-link:hover {
+    background-color: #FF4500; /* OrangeRed color */
+}
+
+.clock-container {
+    position: relative;
+    margin-top: 50px;
+}
+
+.rim,
+.outer,
+.inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.rim {
+    width: 340px;
+    height: 340px;
+    border: 20px solid #000;
+    border-color: #000 transparent #000 transparent;
+    animation: rotate 8s linear infinite;
+    z-index: 0; /* Ensure clock elements are below text and button */
+}
+
+.outer {
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle at center, #081E6C, #000033);
+    border: 10px solid #1A23F2;
+    animation: scaleUp 8s infinite;
+    filter: blur(2px);
+    z-index: -1; /* Ensure clock elements are below text and button */
+}
+
+.inner {
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle at center, #000033, #081E6C);
+    border: 8px solid #1A23F2;
+    animation: scaleDown 8s infinite;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    filter: blur(1px);
+    z-index: -2; /* Ensure clock elements are below text and button */
+}
+
+#clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 0 0 30px #8DCAED;
+    z-index: 1; /* Ensure clock is above other clock elements */
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes scaleUp {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+@keyframes scaleDown {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(0.9);
+    }
 }
